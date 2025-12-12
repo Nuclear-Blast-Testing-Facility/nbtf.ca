@@ -48,7 +48,12 @@
             "description": "Contact email for the site administrator",
             "url": "mailto:admin@nbtf.ca",
             "displayUrl": "admin@nbtf.ca"
-        }
+        },
+        {
+            "title": "Faction: Channel 6 News",
+            "description": "Contact email for Channel 6 News faction",
+            "url": "mailto:c6n@nbtf.ca",
+            "displayUrl": "c6n@nbtf.ca"}
     ]
 }
 ]
