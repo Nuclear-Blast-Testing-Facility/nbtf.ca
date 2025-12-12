@@ -14,6 +14,12 @@
           "description": "Registration Portal for Subdomains and Emails",
           "url": "//register.nbtf.ca",
           "displayUrl": "register.nbtf.ca"
+        },
+        {
+          "title": "Domain's Directory",
+          "description": "Directory of all nbtf.ca subdomains and emails",
+          "url": "//nbtf.ca",
+          "displayUrl": "nbtf.ca"
         }
       ]
     },
