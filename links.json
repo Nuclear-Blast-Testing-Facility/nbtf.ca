@@ -4,6 +4,12 @@
         "name": "Official Links",
         "links": [
           {
+          "title": "Domain's Directory",
+          "description": "Directory of all nbtf.ca subdomains and emails",
+          "url": "//nbtf.ca",
+          "displayUrl": "nbtf.ca"
+        },
+          {
             "title": "nbtf.ca homepage",
             "description": "The homepage for nbtf.ca website",
             "url": "//web.nbtf.ca",
@@ -12,7 +18,7 @@
   ]
 },
     {
-      "name": "Subdomains",
+      "name": "Other Subdomains",
       "links": [
                 {
           "title": "Register",
@@ -21,16 +27,16 @@
           "displayUrl": "register.nbtf.ca"
         },
         {
-          "title": "Domain's Directory",
-          "description": "Directory of all nbtf.ca subdomains and emails",
-          "url": "//nbtf.ca",
-          "displayUrl": "nbtf.ca"
-        },
-        {
           "title": "civblog",
           "description": "Civilian Blogging Platform",
           "url": "//civblog.nbtf.ca",
           "displayUrl": "civblog.nbtf.ca"
+        },
+        {
+          "title": "Domain Maintainer",
+          "description": "the domain of who owns this domain",
+          "url": "//cbx.kiwi",
+          "displayUrl": "cbx.kiwi"
         }
       ]
     },
