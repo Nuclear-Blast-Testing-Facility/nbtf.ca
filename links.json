@@ -20,6 +20,12 @@
             "description": "The homepage for nbtf.ca website using Vite React",
             "url": "//react.nbtf.ca",
             "displayUrl": "react.nbtf.ca"
+    },
+    {
+      "title": "Nuclear Blast App",
+      "description": "the website for NBTF companion app. (coming soon)",
+      "url": "//app.nbtf.ca",
+      "displayUrl": "app.nbtf.ca"
     }
   ]
 },
@@ -43,6 +49,17 @@
           "description": "the domain of who owns this domain",
           "url": "//cbx.kiwi",
           "displayUrl": "cbx.kiwi"
+        }
+      ]
+    },
+    {
+      "name": "Faction Websites",
+      "links": [
+        {
+          "title":"just another faction",
+          "description": "the website for just another faction",
+          "url": "//jaf.nbtf.ca",
+          "displayUrl": "jaf.nbtf.ca"
         }
       ]
     },
