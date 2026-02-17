@@ -60,6 +60,12 @@
           "description": "the website for just another faction",
           "url": "//jaf.nbtf.ca",
           "displayUrl": "jaf.nbtf.ca"
+        },
+        {
+          "title":"Military Training Department",
+          "description":"the website for Military Training Department faction",
+          "url":"//mtd.nbtf.ca",
+          "displayUrl":"mtd.nbtf.ca"
         }
       ]
     },
