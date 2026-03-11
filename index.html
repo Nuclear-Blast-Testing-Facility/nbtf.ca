@@ -13,39 +13,50 @@
 <meta property="og:type" content="website">
 </head>
 <body>
-    <div class="container">
+<div class="crt-screen">
+<div class="terminal-body">
 
-        <div class="status-bar">
-            <span><span class="status-dot"></span> SYSTEM ONLINE</span>
-            <span>NBTF.CA INTERNAL NETWORK</span>
-            <span id="clock"></span>
-        </div>
-
-        <header>
-            <div class="system-tag">Classified — Internal Use Only</div>
-            <h1>NBTF.CA</h1>
-            <p class="subtitle">// LINK DIRECTORY &amp; DOMAIN INDEX<span class="blink">_</span></p>
-        </header>
-
-        <div class="info-panel">
-            <h2>What is NBTF?</h2>
-            <p>The game <strong>Nuclear Blast Testing Facility</strong> has been around a long time (released in <span class="stat">2008</span> by the developer <strong>Ryanblaze</strong>) and has accumulated over <span class="stat">41 million visits</span> with about an <span class="stat">88% approval rating</span>.</p>
-            <p>Players role-play inside a secret nuclear testing base where they can research, test, and launch nukes, defend the facility from raiders, or explore as civilians.</p>
-            <span class="warn">⚠ NBTF.CA is a second-level domain owned by cbx.nz — it may or may not be directly affiliated with NBTF or its developer.</span>
-        </div>
-
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="> search directory...">
-        </div>
-
-        <div id="categories">
-            <!-- Categories loaded from links.json -->
-        </div>
-
-        <footer>
-            <p>&copy; 2025 NBTF.CA — Domain maintained by cbx.nz</p>
-        </footer>
+    <div class="top-bar">
+        <span><span class="dot"></span>CONN: ACTIVE</span>
+        <span>NBTF.CA — INTERNAL TERMINAL</span>
+        <span id="clock"></span>
     </div>
+
+    <div class="boot-header">
+        <div class="ascii-title">█▄░█ █▄▄ ▀█▀ █▀▀ ░ █▀▀ ▄▀█<br>█░▀█ █▄█ ░█░ █▀░ ▄ █▄▄ █▀█</div>
+        <div class="version">NBTF.CA DIRECTORY SYSTEM v2.1.0 — SESSION INITIATED</div>
+        <div class="tagline">// link directory &amp; domain index_</div>
+        <div class="classified">⚠ CLASSIFIED — INTERNAL USE ONLY</div>
+    </div>
+
+    <div class="sep">════════════════════════════════════════════════════════════════════════════════</div>
+
+    <div class="info-block">
+        <div class="label">[ BRIEFING — WHAT IS NBTF? ]</div>
+        <p>The game <span class="hl">Nuclear Blast Testing Facility</span> has been around a long time (released in <span class="hl">2008</span> by the developer <span class="hl">Ryanblaze</span>) and has accumulated over <span class="hl">41 million visits</span> with about an <span class="hl">88% approval rating</span>.</p>
+        <p>Players role-play inside a secret nuclear testing base where they can research, test, and launch nukes, defend the facility from raiders, or explore as civilians.</p>
+        <div class="notice">⚠ NBTF.CA is a second-level domain owned by cbx.nz — it may or may not be directly affiliated with NBTF or its developer.</div>
+    </div>
+
+    <div class="sep">────────────────────────────────────────────────────────────────────────────────</div>
+
+    <div class="prompt-line">
+        <span class="prompt-symbol">nbtf@root:~$</span>
+        <input type="text" id="searchInput" placeholder="search directory...">
+    </div>
+
+    <div id="categories">
+        <!-- Directory entries loaded from links.json -->
+    </div>
+
+    <div class="sep">────────────────────────────────────────────────────────────────────────────────</div>
+
+    <footer>
+        &copy; 2025 NBTF.CA — DOMAIN MAINTAINED BY CBX.NZ — END OF TRANSMISSION
+    </footer>
+
+</div>
+</div>
 
     <script>
         // Clock
