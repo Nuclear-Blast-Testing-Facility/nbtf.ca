@@ -297,11 +297,90 @@
 
         .hidden{display:none !important}
 
-        @media(max-width:600px){
-            .crt-screen{padding:1rem .75rem}
-            .boot-header .ascii-title{font-size:1.15rem;letter-spacing:3px}
-            .top-bar{flex-direction:column;gap:.2rem;text-align:center}
-            .link-card{flex-direction:column;gap:.15rem}
+        /* ── MOBILE / RESPONSIVE ── */
+
+        /* Tablets & small laptops */
+        @media(max-width:768px){
+            .crt-screen{padding:1.25rem 1rem}
+            .terminal-body{max-width:100%}
+            .boot-header .ascii-title{font-size:1.25rem;letter-spacing:4px}
+            .info-block p{font-size:15px}
+            .prompt-line .prompt-symbol{font-size:14px}
+            .prompt-line input{font-size:15px}
+        }
+
+        /* Phones */
+        @media(max-width:480px){
+            .crt-screen{padding:.75rem .5rem}
+
+            /* Top bar stacks vertically */
+            .top-bar{
+                flex-direction:column;
+                gap:.25rem;
+                text-align:center;
+                font-size:12px;
+                padding-bottom:.5rem;
+            }
+
+            /* Smaller ASCII title */
+            .boot-header{padding:.6rem 0;margin-bottom:.6rem}
+            .boot-header .ascii-title{
+                font-size:.95rem;
+                letter-spacing:2px;
+                word-break:break-all;
+                overflow-wrap:break-word;
+                white-space:normal;
+            }
+            .boot-header .version{font-size:12px}
+            .boot-header .tagline{font-size:13px}
+            .boot-header .classified{font-size:10px;letter-spacing:2px;padding:.1rem .4rem}
+
+            /* Separators don't overflow */
+            .sep{font-size:10px}
+
+            /* Info block tighter */
+            .info-block p{
+                font-size:14px;
+                padding-left:.6rem;
+                line-height:1.6;
+            }
+            .info-block .label{font-size:12px;letter-spacing:1px}
+            .info-block .notice{font-size:12px;padding-left:.6rem}
+
+            /* Prompt wraps */
+            .prompt-line{
+                flex-direction:column;
+                align-items:flex-start;
+                gap:.25rem;
+            }
+            .prompt-line .prompt-symbol{font-size:13px}
+            .prompt-line input{
+                width:100%;
+                font-size:14px;
+                padding:.3rem .15rem;
+            }
+
+            /* Links stack vertically */
+            .category h2{font-size:14px;letter-spacing:1px}
+            .link-card{
+                flex-direction:column;
+                gap:.15rem;
+                padding:.35rem .4rem .35rem 1.2rem;
+            }
+            .link-title{font-size:14px;white-space:normal}
+            .link-description{font-size:13px}
+            .link-url{font-size:11px}
+
+            footer{font-size:11px;letter-spacing:.5px}
+        }
+
+        /* Very small screens (SE, older phones) */
+        @media(max-width:360px){
+            .crt-screen{padding:.5rem .35rem}
+            .boot-header .ascii-title{font-size:.8rem;letter-spacing:1px}
+            .top-bar{font-size:11px}
+            .info-block p{font-size:13px}
+            .prompt-line .prompt-symbol{font-size:12px}
         }
     </style>
 </head>
