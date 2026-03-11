@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/diehyknwd/image/upload/v1766782366/image_2025-12-27_095244705_waill2.png">
-    <title>nbtf.ca - Link Directory</title>
-    <link rel="stylesheet" href="template.css">
+    <title>NBTF.CA — Internal Directory</title>
     <link rel="stylesheet" href="index.css">
      <meta property="og:title" content="nbtf.ca">
 <meta property="og:description" content="a second-level domain owned by cb𝑥.nz for the roblox game; `Nuclear Blast Testing Facility`. NBTF Is developed by Ryanblaze, but NBTF.ca may or may not be affiliated with NBTF directly.">
@@ -15,25 +14,49 @@
 </head>
 <body>
     <div class="container">
+
+        <div class="status-bar">
+            <span><span class="status-dot"></span> SYSTEM ONLINE</span>
+            <span>NBTF.CA INTERNAL NETWORK</span>
+            <span id="clock"></span>
+        </div>
+
         <header>
-            <h1>nbtf.ca</h1>
-            <p class="subtitle">the domain's link directory</p>
+            <div class="system-tag">Classified — Internal Use Only</div>
+            <h1>NBTF.CA</h1>
+            <p class="subtitle">// LINK DIRECTORY &amp; DOMAIN INDEX<span class="blink">_</span></p>
         </header>
 
+        <div class="info-panel">
+            <h2>What is NBTF?</h2>
+            <p>The game <strong>Nuclear Blast Testing Facility</strong> has been around a long time (released in <span class="stat">2008</span> by the developer <strong>Ryanblaze</strong>) and has accumulated over <span class="stat">41 million visits</span> with about an <span class="stat">88% approval rating</span>.</p>
+            <p>Players role-play inside a secret nuclear testing base where they can research, test, and launch nukes, defend the facility from raiders, or explore as civilians.</p>
+            <span class="warn">⚠ NBTF.CA is a second-level domain owned by cbx.nz — it may or may not be directly affiliated with NBTF or its developer.</span>
+        </div>
+
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search links...">
+            <input type="text" id="searchInput" placeholder="> search directory...">
         </div>
 
         <div id="categories">
-            <!-- Categories will be loaded from links.json -->
+            <!-- Categories loaded from links.json -->
         </div>
 
         <footer>
-            <p>© 2025 nbtf.ca | Domain's Link Directory</p>
+            <p>&copy; 2025 NBTF.CA — Domain maintained by cbx.nz</p>
         </footer>
     </div>
 
     <script>
+        // Clock
+        function updateClock(){
+            const d=new Date();
+            const ts=d.toISOString().replace('T',' ').substring(0,19)+' UTC';
+            const el=document.getElementById('clock');
+            if(el) el.textContent=ts;
+        }
+        updateClock();setInterval(updateClock,1000);
+
         // Load and render links from JSON
         async function loadLinks() {
             try {
@@ -43,7 +66,7 @@
                 initSearch();
             } catch (error) {
                 console.error('Error loading links:', error);
-                document.getElementById('categories').innerHTML = '<p style="color: white; text-align: center;">Error loading links. Please check links.json</p>';
+                document.getElementById('categories').innerHTML = '<p class="error">[ERR] FAILED TO LOAD DIRECTORY — CHECK links.json</p>';
             }
         }
 
