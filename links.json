@@ -83,12 +83,20 @@
         "description": "Contact email for just another faction",
         "url": "mailto:jaf@factions.nbtf.ca",
         "displayUrl": "jaf@factions.nbtf.ca"
-},
-        {
+        },
+      {
             "title": "Faction: Channel 6 News",
             "description": "Contact email for Channel 6 News faction",
             "url": "mailto:c6n@factions.nbtf.ca",
-            "displayUrl": "c6n@factions.nbtf.ca"}
+            "displayUrl": "c6n@factions.nbtf.ca"
+        },
+      {
+            "title": "Official: Legal Contact",
+            "description": "Contact email for Legal Inquiries and Issues",
+            "url": "mailto:legal@cbx.kiwi",
+            "displayUrl": "legal@cbx.kiwi"
+
+        }
     ]
 }
 ]
