@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -382,9 +382,103 @@
             .info-block p{font-size:13px}
             .prompt-line .prompt-symbol{font-size:12px}
         }
+
+        /* ══════════════════════════════════════
+           LIGHT MODE (EASY READ) — DEFAULT
+           Overrides CRT variables and disables effects
+           ══════════════════════════════════════ */
+        html[data-theme="light"]{
+            --crt-bg:#f5f6f8;
+            --crt-border:#d0d5dd;
+            --crt-green:#1a5276;
+            --crt-green-dim:#2471a3;
+            --crt-green-muted:#6b7a8d;
+            --crt-green-faint:#c8cdd5;
+            --crt-amber:#b03a2e;
+            --crt-red:#b03a2e;
+            --crt-text:#1c1c2e;
+            --crt-text-dim:#3d4451;
+            --font-term:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+        }
+        html[data-theme="light"] body{
+            background:var(--crt-bg);
+        }
+        html[data-theme="light"] ::selection{
+            background:var(--crt-green);
+            color:#fff;
+        }
+        /* Kill CRT effects */
+        html[data-theme="light"] .crt-screen{
+            animation:none;
+        }
+        html[data-theme="light"] .crt-screen::before,
+        html[data-theme="light"] .crt-screen::after{
+            display:none;
+        }
+        html[data-theme="light"] .terminal-body{
+            animation:none;
+        }
+        html[data-theme="light"] .top-bar .dot{
+            animation:none;
+            box-shadow:none;
+            background:var(--crt-green);
+        }
+        /* Remove hardcoded green glows */
+        html[data-theme="light"] .boot-header .ascii-title{
+            text-shadow:none;
+        }
+        html[data-theme="light"] .prompt-line .prompt-symbol{
+            text-shadow:none;
+        }
+        html[data-theme="light"] .link-card:hover .link-title{
+            text-shadow:none;
+        }
+        /* Fix hardcoded green hover tint on cards */
+        html[data-theme="light"] .link-card:hover,
+        html[data-theme="light"] .link-card:focus{
+            background:rgba(26,82,118,0.05);
+        }
+        /* Separator colour */
+        html[data-theme="light"] .sep{
+            color:#c8cdd5;
+        }
+
+        /* ── MODE TOGGLE BUTTON ── */
+        #theme-toggle{
+            position:fixed;
+            top:.75rem;
+            right:1rem;
+            z-index:9500;
+            cursor:pointer;
+            border:none;
+            font-family:var(--font-term);
+            font-size:12px;
+            letter-spacing:1.5px;
+            padding:.3rem .65rem;
+            transition:opacity .15s,background .15s;
+        }
+        #theme-toggle:hover{opacity:.75}
+        #theme-toggle:focus-visible{outline:2px dashed currentColor;outline-offset:2px}
+        /* Dark mode appearance */
+        [data-theme="dark"] #theme-toggle{
+            background:var(--crt-bg);
+            color:var(--crt-amber);
+            border:1px solid var(--crt-amber);
+        }
+        /* Light mode appearance */
+        [data-theme="light"] #theme-toggle{
+            background:#fff;
+            color:#b03a2e;
+            border:1px solid #b03a2e;
+            border-radius:4px;
+            font-family:system-ui,-apple-system,'Segoe UI',sans-serif;
+            letter-spacing:.4px;
+            font-size:12px;
+        }
     </style>
 </head>
 <body>
+<button id="theme-toggle" aria-label="Toggle display mode"></button>
 <div class="crt-screen">
 <div class="terminal-body">
 
@@ -427,6 +521,26 @@
 </div>
 
 <script>
+    // ── THEME TOGGLE ──
+    (function(){
+        var saved=localStorage.getItem('nbtf-theme');
+        var theme=saved||'light';
+        document.documentElement.setAttribute('data-theme',theme);
+        function renderToggle(t){
+            var btn=document.getElementById('theme-toggle');
+            if(!btn)return;
+            btn.textContent=t==='light'?'[ ■ CRT MODE ]':'[ □ EASY READ ]';
+            btn.title=t==='light'?'Switch to CRT terminal mode':'Switch to easy read mode';
+        }
+        renderToggle(theme);
+        document.getElementById('theme-toggle').addEventListener('click',function(){
+            theme=theme==='light'?'dark':'light';
+            document.documentElement.setAttribute('data-theme',theme);
+            localStorage.setItem('nbtf-theme',theme);
+            renderToggle(theme);
+        });
+    })();
+
     // Live UTC clock
     function updateClock(){
         var d=new Date();
