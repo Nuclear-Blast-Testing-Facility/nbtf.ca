@@ -6,8 +6,8 @@
           {
           "title": "Domain's Directory",
           "description": "Directory of all nbtf.ca subdomains and emails",
-          "url": "//nbtf.ca",
-          "displayUrl": "nbtf.ca"
+          "url": "//index.nbtf.ca",
+          "displayUrl": "i.nbtf.ca"
         },
           {
             "title": "nbtf.ca homepage",
@@ -18,8 +18,8 @@
     {
       "title": "NBTF.CA but Vite React",
             "description": "The homepage for nbtf.ca website using Vite React",
-            "url": "//react.nbtf.ca",
-            "displayUrl": "react.nbtf.ca"
+            "url": "//nbtf.ca",
+            "displayUrl": "nbtf.ca"
     },
     {
       "title": "Nuclear Blast App",
